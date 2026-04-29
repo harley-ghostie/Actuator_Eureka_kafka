@@ -72,7 +72,7 @@ Ele é indicado para mapear rapidamente quais endpoints estão acessíveis e qua
 Antes de executar, ajuste a variável `BASE` no início do script conforme o ambiente autorizado:
 
 ```bash
-BASE="https://exemplo.com.br"
+BASE="https://api.exemplo.com.br"
 ```
 
 ### Explicação dos campos
@@ -81,11 +81,6 @@ BASE="https://exemplo.com.br"
 |---|---|
 | `BASE` | URL base da aplicação Spring Boot que será testada. |
 
-### Exemplo de configuração
-
-```bash
-BASE="https://api.exemplo.com.br"
-```
 
 ### Como usar
 
@@ -148,7 +143,7 @@ Ele é indicado para validar se as credenciais expostas ainda estão funcionais 
 Antes de executar, ajuste as variáveis no início do script conforme o ambiente autorizado:
 
 ```bash
-BASE_URL="https://exemplo.com.br"
+BASE_URL="https://api.exemplo.com.br"
 ENV_PATH="/api/management/env"
 ```
 
@@ -158,13 +153,6 @@ ENV_PATH="/api/management/env"
 |---|---|
 | `BASE_URL` | URL base da aplicação Spring Boot. |
 | `ENV_PATH` | Caminho do endpoint Actuator que expõe as variáveis de ambiente. |
-
-### Exemplo de configuração
-
-```bash
-BASE_URL="https://api.exemplo.com.br"
-ENV_PATH="/api/management/env"
-```
 
 ### Como usar
 
@@ -228,16 +216,9 @@ Ele é útil para demonstrar que o vazamento não é apenas informativo, mas pod
 Antes de executar, ajuste os campos de conexão com valores autorizados:
 
 ```python
-conf = {
   "bootstrap.servers": "KAFKA_BOOTSTRAP_SERVER:9092",
-  "security.protocol": "SASL_SSL",
-  "sasl.mechanisms": "PLAIN",
   "sasl.username": "KAFKA_API_KEY",
   "sasl.password": "KAFKA_API_SECRET",
-  "group.id": "pentest-metadata-only",
-  "enable.auto.commit": False,
-  "session.timeout.ms": 6000,
-}
 ```
 
 ### Explicação dos campos
